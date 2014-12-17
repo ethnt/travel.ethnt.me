@@ -1,0 +1,13 @@
+css/
+jsc/
+.editorconfig
+.gitignore
+.ruby-version
+assets.yml
+compass.rb
+config.ru
+Gemfile*
+Guardfile
+Procfile
+Rakefile
+README.md
