@@ -1,0 +1,14 @@
+[
+  {% for post in site.pages.articles.posts %}
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.031952,38.913184]
+      },
+      "properties": {
+        title: "{{ post.meta['place_name'] }}"
+      }
+    }{% unless post == site.pages.articles.posts.last %},{% endunless %}
+  {% endfor %}
+]

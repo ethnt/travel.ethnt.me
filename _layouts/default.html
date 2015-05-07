@@ -16,10 +16,13 @@
 
     <link href="/assets/application.css" rel="stylesheet">
 
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css' rel='stylesheet' />
+
     {% include 'includes/typekit' %}
   </head>
   <body>
-    <header id="header" role="banner">
+    <header id="header">
       <h1><a href="/">{{ site.title }}</a></h1>
       <nav>
         <ul>
@@ -32,7 +35,9 @@
     <main role="main">
       {{ content }}
     </main>
-
+    <footer id="footer">
+      <p>&copy; 2015 <a href="#">Ethan Turkeltaub</a>.</p>
+    </footer>
     <script src="/assets/application.js"></script>
   </body>
 </html>

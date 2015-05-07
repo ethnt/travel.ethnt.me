@@ -1,12 +1,13 @@
+@charset "UTF-8";
 /*
-  base-siteleaf
+  Abroad
     file: css/src/application.scss
 */
 /*
   base-siteleaf
     file: css/src/lib/_base.scss
 */
-/* line 5, ../../../.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -28,45 +29,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -76,6 +77,372 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     file: css/src/lib/includes/_grid.scss
 */
 /*
-	base-siteleaf
+	Abroad
 		file: css/src/lib/includes/_colors.scss
 */
+/*
+  Abroad
+    file: css/src/lib/includes/_fonts.scss
+*/
+/*
+  Typefaces
+*/
+/*
+  Weights
+*/
+/*
+  Vertical Rhythm
+*/
+/* line 106, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 112.5%;
+  line-height: 2em;
+}
+
+/*
+  = Appendix
+    I. Universal
+    II. Header
+*/
+/*
+  I. Universal
+*/
+/* line 20, src/application.scss */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fefefe;
+  color: #0e0e0e;
+  font-weight: 300;
+  font-family: "garamond-premier-pro-caption", Times New Roman, Times, serif;
+}
+
+/* line 29, src/application.scss */
+a {
+  border-bottom-width: 0.11111em;
+  border-bottom-style: solid;
+  padding-bottom: -0.11111em;
+  border-color: #f2f2ee;
+  color: #0e0e0e;
+  text-decoration: none;
+}
+/* line 36, src/application.scss */
+a:hover {
+  border-color: #cccdcb;
+}
+
+/* line 41, src/application.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 45, src/application.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  font-family: "aktiv-grotesk-std";
+}
+/* line 50, src/application.scss */
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  border: none;
+}
+/* line 53, src/application.scss */
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+  color: #414141;
+}
+
+/* line 59, src/application.scss */
+h2 {
+  font-size: 1.55556em;
+  line-height: 1.28571em;
+}
+
+/*
+  II. Header
+*/
+/* line 68, src/application.scss */
+header#header {
+  max-width: 44em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+/* line 12, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
+header#header:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 74, src/application.scss */
+header#header h1 {
+  width: 14.77273%;
+  float: left;
+  margin-right: 2.27273%;
+}
+/* line 78, src/application.scss */
+header#header nav {
+  width: 82.95455%;
+  float: right;
+  margin-right: 0;
+}
+/* line 81, src/application.scss */
+header#header nav ul {
+  float: right;
+}
+/* line 84, src/application.scss */
+header#header nav ul li {
+  display: inline-block;
+}
+/* line 89, src/application.scss */
+header#header nav ul li a {
+  border: none;
+  color: #cccdcb;
+}
+/* line 93, src/application.scss */
+header#header nav ul li a:hover {
+  color: #a6a7a5;
+}
+/* line 98, src/application.scss */
+header#header nav ul li + li {
+  margin-left: 1em;
+}
+
+/*
+  III. Main
+*/
+/* line 113, src/application.scss */
+main article.post section, main .page section {
+  max-width: 44em;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
+main article.post section:after, main .page section:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 116, src/application.scss */
+main article.post section p + p, main .page section p + p {
+  margin-top: 2em;
+}
+/* line 120, src/application.scss */
+main article.post section figure, main .page section figure {
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+/* line 125, src/application.scss */
+main article.post section h3, main article.post section h4, main article.post section h5, main article.post section h6, main .page section h3, main .page section h4, main .page section h5, main .page section h6 {
+  margin-bottom: 1em;
+}
+/* line 129, src/application.scss */
+main article.post section ul, main article.post section ol, main .page section ul, main .page section ol {
+  margin: 2em 0;
+}
+/* line 132, src/application.scss */
+main article.post section ul li, main article.post section ol li, main .page section ul li, main .page section ol li {
+  padding-left: 0.5em;
+  margin-left: 3.5em;
+}
+/* line 138, src/application.scss */
+main article.post section ul li, main .page section ul li {
+  list-style-type: disc;
+}
+/* line 142, src/application.scss */
+main article.post section ol li, main .page section ol li {
+  list-style-type: decimal;
+}
+/* line 149, src/application.scss */
+main article.post header {
+  text-align: center;
+}
+/* line 152, src/application.scss */
+main article.post header:after {
+  font-size: 0.88889em;
+  line-height: 2.25em;
+  color: #cccdcb;
+  content: "\2014";
+}
+/* line 159, src/application.scss */
+main article.post header a {
+  border: none;
+}
+/* line 163, src/application.scss */
+main article.post header figure img {
+  max-height: 100%;
+}
+/* line 168, src/application.scss */
+main article.post header h2 {
+  margin-top: 1em;
+}
+/* line 172, src/application.scss */
+main article.post header p.meta {
+  color: #cccdcb;
+}
+/* line 177, src/application.scss */
+main article.post header p.meta span {
+  display: inline-block;
+}
+/* line 181, src/application.scss */
+main article.post header p.meta span:last-child:before {
+  content: " • ";
+}
+/* line 190, src/application.scss */
+main article.post footer {
+  margin-top: 2em;
+}
+/* line 193, src/application.scss */
+main article.post footer p.date {
+  max-width: 44em;
+  margin-left: auto;
+  margin-right: auto;
+  color: #cccdcb;
+}
+/* line 12, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
+main article.post footer p.date:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 199, src/application.scss */
+main article.post footer .pagination {
+  max-width: 44em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+/* line 12, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
+main article.post footer .pagination:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 205, src/application.scss */
+main article.post footer .pagination h4 {
+  color: #cccdcb;
+}
+/* line 209, src/application.scss */
+main article.post footer .pagination .next, main article.post footer .pagination .previous {
+  width: 48.86364%;
+  float: left;
+  margin-right: 2.27273%;
+}
+/* line 213, src/application.scss */
+main article.post footer .pagination .previous {
+  float: right;
+  margin-right: 0;
+  text-align: right;
+}
+/* line 222, src/application.scss */
+main .archives {
+  max-width: 44em;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
+main .archives:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 225, src/application.scss */
+main .archives:before {
+  color: #f2f2ee;
+  content: "———";
+  display: block;
+  font-family: "aktiv-grotesk-std";
+  font-weight: 600;
+  padding-bottom: 2em;
+}
+/* line 234, src/application.scss */
+main .archives h4 {
+  margin-bottom: 2em;
+}
+/* line 238, src/application.scss */
+main .archives p {
+  overflow: hidden;
+  *zoom: 1;
+  display: block;
+}
+/* line 243, src/application.scss */
+main .archives p a, main .archives p span {
+  display: inline-block;
+}
+/* line 247, src/application.scss */
+main .archives p a {
+  border: none;
+  color: #a6a7a5;
+  float: left;
+}
+/* line 253, src/application.scss */
+main .archives p span {
+  color: #cccdcb;
+  float: right;
+}
+/* line 261, src/application.scss */
+main .page header {
+  max-width: 44em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+/* line 12, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
+main .page header:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 266, src/application.scss */
+main .page header:after {
+  font-size: 0.88889em;
+  line-height: 2.25em;
+  color: #cccdcb;
+  content: "\2014";
+}
+/* line 278, src/application.scss */
+main .page #map-container {
+  max-width: 59em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+  margin-top: 1em;
+}
+/* line 12, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
+main .page #map-container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 284, src/application.scss */
+main .page #map-container #map {
+  height: 40em;
+  width: 100%;
+}
+
+/*
+  IV. Footer
+*/
+/* line 297, src/application.scss */
+footer#footer {
+  border-top-width: 0.05556em;
+  border-top-style: solid;
+  padding-top: 0.94444em;
+  max-width: 44em;
+  margin-left: auto;
+  margin-right: auto;
+  border-color: #f2f2ee;
+  color: #cccdcb;
+  margin-bottom: 2em;
+  margin-top: 4em;
+}
+/* line 12, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
+footer#footer:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 310, src/application.scss */
+footer#footer a {
+  color: #cccdcb;
+}

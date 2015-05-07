@@ -1,6 +1,313 @@
 /*
-  base-siteleaf
+  Abroad
     file: css/src/application.scss
 */
 
 @import "lib/base";
+
+
+/*
+  = Appendix
+    I. Universal
+    II. Header
+*/
+
+
+/*
+  I. Universal
+*/
+
+body {
+  @include font-smoothing();
+
+  background: $base;
+  color: $text;
+  font-weight: 300;
+  font-family: $serif;
+}
+
+a {
+  @include trailing-border(2px, 0);
+
+  border-color: $light-grey;
+  color: $text;
+  text-decoration: none;
+
+  &:hover {
+    border-color: $grey;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $bold;
+  font-family: $sans-serif;
+  // font-family: $serif-head;
+
+  a {
+    border: none;
+
+    &:hover {
+      color: lighten($text, 20%);
+    }
+  }
+}
+
+h2 {
+  @include adjust-font-size-to(28px);
+}
+
+
+/*
+  II. Header
+*/
+
+header#header {
+  @include container;
+
+  margin-bottom: rhythm(0.5);
+  margin-top: rhythm(0.5);
+
+  h1 {
+    @include span(2 of 12);
+  }
+
+  nav {
+    @include span(last 10 of 12);
+
+    ul {
+      float: right;
+
+      li {
+        // @include adjust-font-size-to(14px);
+
+        display: inline-block;
+
+        a {
+          border: none;
+          color: $grey;
+
+          &:hover {
+            color: $dark-grey;
+          }
+        }
+
+        & + li {
+          margin-left: rhythm(0.5);
+        }
+      }
+    }
+  }
+}
+
+
+/*
+  III. Main
+*/
+
+main {
+  article.post, .page {
+    section {
+      @include container;
+
+      p + p {
+        margin-top: rhythm(1);
+      }
+
+      figure {
+        margin-bottom: rhythm(1);
+        margin-top: rhythm(1);
+      }
+
+      h3, h4, h5, h6 {
+        margin-bottom: rhythm(0.5);
+      }
+
+      ul, ol {
+        margin: rhythm(1) 0;
+
+        li {
+          padding-left: rhythm(0.25);
+          margin-left: rhythm(1.75);
+        }
+      }
+
+      ul li {
+        list-style-type: disc;
+      }
+
+      ol li {
+        list-style-type: decimal;
+      }
+    }
+  }
+
+  article.post {
+    header {
+      text-align: center;
+
+      &:after {
+        @include adjust-font-size-to(16px);
+
+        color: $grey;
+        content: "\2014";
+      }
+
+      a {
+        border: none;
+      }
+
+      figure img {
+        max-height: 100%;
+        // -webkit-filter: brightness(75%);
+      }
+
+      h2 {
+        margin-top: rhythm(0.5);
+      }
+
+      p.meta {
+        // @include adjust-font-size-to(14px);
+
+        color: $grey;
+
+        span {
+          display: inline-block;
+
+          &:last-child {
+            &:before {
+              content: " • ";
+            }
+          }
+        }
+      }
+    }
+
+
+    footer {
+      margin-top: rhythm(1);
+
+      p.date {
+        @include container;
+
+        color: $grey;
+      }
+
+      .pagination {
+        @include container;
+
+        margin-bottom: rhythm(1);
+        margin-top: rhythm(1);
+
+        h4 {
+          color: $grey;
+        }
+
+        .next, .previous {
+          @include span(6 of 12);
+        }
+
+        .previous {
+          @include omega;
+
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  .archives {
+    @include container;
+
+    &:before {
+      color: $light-grey;
+      content: "———";
+      display: block;
+      font-family: $sans-serif;
+      font-weight: $semibold;
+      padding-bottom: rhythm(1);
+    }
+
+    h4 {
+      margin-bottom: rhythm(1);
+    }
+
+    p {
+      @include clearfix;
+
+      display: block;
+
+      a, span {
+        display: inline-block;
+      }
+
+      a {
+        border: none;
+        color: $dark-grey;
+        float: left;
+      }
+
+      span {
+        color: $grey;
+        float: right;
+      }
+    }
+  }
+
+  .page {
+    header {
+      @include container;
+
+      text-align: center;
+
+      &:after {
+        @include adjust-font-size-to(16px);
+
+        color: $grey;
+        content: "\2014";
+      }
+    }
+
+    section {
+      // @include container;
+    }
+
+    #map-container {
+      @include container(16);
+
+      margin-bottom: rhythm(1);
+      margin-top: rhythm(0.5);
+
+      #map {
+        height: rhythm(20);
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+/*
+  IV. Footer
+*/
+
+footer#footer {
+  @include leading-border(1px, 0.5);
+  @include container;
+
+  border-color: $light-grey;
+  color: $grey;
+  margin-bottom: rhythm(1);
+  margin-top: rhythm(2);
+
+  p {
+    // @include adjust-font-size-to(14px);
+  }
+
+  a {
+    color: $grey;
+  }
+}
