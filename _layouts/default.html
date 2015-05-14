@@ -22,22 +22,8 @@
     {% include 'includes/typekit' %}
   </head>
   <body>
-    <header id="header">
-      <h1><a href="/">{{ site.title }}</a></h1>
-      <nav>
-        <ul>
-          {% for page in site.pages %}
-            <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-          {% endfor %}
-        </ul>
-      </nav>
-    </header>
-    <main role="main">
-      {{ content }}
-    </main>
-    <footer id="footer">
-      <p>&copy; 2015 <a href="#">Ethan Turkeltaub</a>.</p>
-    </footer>
+    
+
     <script src="/assets/application.js"></script>
   </body>
 </html>

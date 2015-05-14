@@ -1,13 +1,5 @@
 {% capture content %}
-  {% for post in posts limit:1 %}
-    {% include 'includes/post' %}
-  {% endfor %}
-  <div class="archives">
-    <h4>Archives</h4>
-    {% for post in posts %}
-      {% include 'includes/post-archive' %}
-    {% endfor %}
-  </div>
+  
 {% endcapture %}
 
 {% include 'layouts/default' %}
