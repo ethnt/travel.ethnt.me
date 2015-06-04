@@ -1,0 +1,20 @@
+{% capture content %}
+
+{% assign posts_by_place = site.pages.travelogue.posts | group_by: "meta.place" %}
+
+<div class="places">
+  {% for place in posts_by_place %}
+    <article class="place">
+      <h3>{{ place.name }}</h3>
+      <ul>
+        {% for post in place.items %}
+          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </article>
+  {% endfor %}
+</div>
+
+{% endcapture %}
+
+{% include 'layouts/default' %}

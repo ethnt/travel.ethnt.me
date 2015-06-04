@@ -30,23 +30,6 @@
   <div class="content">
     {{ current.body }}
   </div>
-  <!-- <footer>
-    <p class="meta"><time datetime="{{ current.date | date: '%F %T' }}">{{ current.date | date: '%B %d, %Y' }}</time></p>
-    <nav>
-      <article class="next">
-        {% if current.next %}
-          <h3>Newer</h3>
-          <p><a href="{{ current.next.url }}">{{ current.next.title }}</a></p>
-        {% endif %}
-      </article>
-      <article class="previous">
-        {% if current.previous %}
-          <h3>Older</h3>
-          <p><a href="{{ current.previous.url }}">{{ current.previous.title }}</a></p>
-        {% endif %}
-      </article>
-    </nav>
-  </footer> -->
 </article>
 
 {% endcapture %}

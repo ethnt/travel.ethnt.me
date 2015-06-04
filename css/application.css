@@ -275,6 +275,57 @@ article.post-listing span {
   letter-spacing: -2px;
 }
 
+/* line 1, src/lib/pages/_places.scss */
+.places {
+  max-width: 43.75em;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 0 0 6em;
+}
+/* line 12, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/susy-2.2.5/sass/susy/output/support/_clearfix.scss */
+.places:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 4, src/lib/pages/_places.scss */
+.places .place {
+  width: 48.57143%;
+  float: left;
+}
+/* line 66, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/susy-2.2.5/sass/susy/language/susy/_gallery.scss */
+.places .place:nth-child(2n + 1) {
+  margin-left: 0;
+  margin-right: -100%;
+  clear: both;
+  margin-left: 0;
+}
+/* line 66, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/susy-2.2.5/sass/susy/language/susy/_gallery.scss */
+.places .place:nth-child(2n + 2) {
+  margin-left: 51.42857%;
+  margin-right: -100%;
+  clear: none;
+}
+/* line 7, src/lib/pages/_places.scss */
+.places .place:nth-child(n + 3) {
+  margin-top: 3em;
+}
+/* line 11, src/lib/pages/_places.scss */
+.places .place ul li {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+/* line 16, src/lib/pages/_places.scss */
+.places .place ul li a {
+  border: none;
+  color: #a6a7a5;
+}
+/* line 20, src/lib/pages/_places.scss */
+.places .place ul li a:hover {
+  color: #999a98;
+}
+
 /*
   = Appendix
     I. Universal

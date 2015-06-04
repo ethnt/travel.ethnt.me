@@ -1,0 +1,26 @@
+.places {
+  @include row;
+
+  .place {
+    @include gallery(6 of 12);
+
+    &:nth-child(n + 3) {
+      margin-top: rhythm(2);
+    }
+
+    ul li {
+      list-style-type: none;
+      padding-left: 0;
+      margin-left: 0;
+
+      a {
+        border: none;
+        color: $dark-grey;
+
+        &:hover {
+          color: darken($dark-grey, 5%);
+        }
+      }
+    }
+  }
+}
