@@ -1,5 +1,18 @@
 {% capture content %}
-  
+  <div class="featured">
+    {% for current in posts limit:1 %}
+      {% include 'includes/post' %}
+    {% endfor %}
+  </div>
+
+  <div class="archive border">
+    <header>
+      <h3>Archives</h3>
+    </header>
+    {% for current in posts %}
+      {% include 'includes/post-listing' %}
+    {% endfor %}
+  </div>
 {% endcapture %}
 
 {% include 'layouts/default' %}

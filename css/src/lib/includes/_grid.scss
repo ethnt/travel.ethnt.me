@@ -1,14 +1,15 @@
 /*
-  Abroad
-    file: css/src/lib/includes/_grid.scss
+  Forma
+    file: css/src/lib/includes/_colors.scss
 */
+
 
 @import "compass/layout";
 @import "susy";
 
 $total-columns: 12;
-$column-width: 2.75em;
-$gutter-width: 1em;
+$column-width: 2.5em;
+$gutter-width: 1.25em;
 
 $susy: (
     columns: $total-columns,
@@ -27,8 +28,4 @@ $screen-large: 1280px;
   @include container;
 
   margin: 0 0 0 rhythm(4);
-}
-
-@mixin inner-container() {
-  @include container(9);
 }

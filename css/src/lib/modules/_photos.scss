@@ -1,0 +1,31 @@
+/*
+  Forma
+    file: css/lib/pages/_photos.scss
+*/
+
+.photos {
+  figure {
+    @include row;
+
+    a {
+      border: none;
+    }
+
+    p.meta {
+      color: $grey;
+    }
+
+    & + figure {
+      &:before {
+        content: "———";
+        color: $light-grey;
+        display: block;
+        font-weight: 500;
+        margin: 0 auto;
+        padding: rhythm(2) 0;
+        text-align: center;
+        letter-spacing: -2px;
+      }
+    }
+  }
+}

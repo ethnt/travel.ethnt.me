@@ -1,0 +1,103 @@
+/*
+  Forma
+    file: css/lib/modules/_post.scss
+*/
+
+article.post, article.page {
+  @include row;
+
+  & + article.post {
+    &:before {
+      content: "———";
+      color: $light-grey;
+      display: block;
+      font-weight: 500;
+      margin: 0 auto;
+      padding: rhythm(2) 0;
+      text-align: center;
+      letter-spacing: -2px;
+    }
+  }
+
+  .content {
+    blockquote {
+      margin-bottom: rhythm(1);
+      margin-top: rhythm(1);
+    }
+
+    h3, h4, h5, h6 {
+      margin-top: rhythm(1.5);
+      margin-bottom: rhythm(0.25);
+    }
+
+    img {
+      margin-bottom: rhythm(0.5);
+      margin-top: rhythm(0.5);
+    }
+  }
+
+  header {
+    margin-bottom: rhythm(1);
+
+    h2 {
+      margin-bottom: rhythm(0.5);
+    }
+
+    section.assets {
+      a {
+        border: none;
+      }
+
+      figure {
+        display: block;
+        margin: 0 auto;
+
+        figcaption {
+          color: $grey;
+          // margin-bottom: rhythm(1);
+        }
+
+        & + figure {
+          margin-top: rhythm(1);
+        }
+      }
+    }
+  }
+
+  footer {
+    margin-top: rhythm(1);
+
+    p.meta {
+      color: $grey;
+    }
+
+    nav {
+      @include container;
+
+      margin-top: rhythm(2);
+
+      article {
+        @include span(6 of 12);
+
+        h3 {
+          @include adjust-font-size-to(16px);
+
+          color: $grey;
+          font-weight: 600;
+        }
+
+        h3, p {
+          display: block;
+        }
+
+        &.previous {
+          @include omega;
+
+          h3, p {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}

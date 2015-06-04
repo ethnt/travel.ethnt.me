@@ -1,5 +1,5 @@
 /*
-  Abroad
+  Forma
     file: css/src/application.scss
 */
 
@@ -10,6 +10,8 @@
   = Appendix
     I. Universal
     II. Header
+    III. Main
+    IV. Footer
 */
 
 
@@ -18,5 +20,209 @@
 */
 
 body {
-  @include font-smoothing();
+  @include font-smoothing;
+  @include font-size(16px);
+
+  background: $base;
+  color: $text;
+  font-family: $sans-serif;
+  font-weight: 400;
+  line-height: 2em;
+}
+
+a {
+  @include trailing-border(2px, 0);
+
+  border-color: $light-grey;
+  color: $text;
+  text-decoration: none;
+
+  &:hover {
+    border-color: darken($light-grey, 5%);
+  }
+}
+
+blockquote {
+  border-left: rhythm(0.25) solid $light-grey;
+  padding-left: rhythm(0.75);
+  color: $dark-grey;
+}
+
+em {
+  font-style: italic;
+}
+
+h1 {
+  font-weight: 700;
+
+  a {
+    border: none;
+  }
+}
+
+h2, h3, h4, h5, h6 {
+  font-weight: $bold;
+}
+
+h2 {
+  @include adjust-font-size-to(24px);
+}
+
+h3 {
+  @include adjust-font-size-to(20px);
+}
+
+h4 {
+  @include adjust-font-size-to(18px);
+}
+
+h6 {
+  color: $dark-grey;
+}
+
+img {
+  max-width: 100%;
+}
+
+ol, ul {
+  margin-top: rhythm(0.5);
+  margin-bottom: rhythm(0.5);
+
+  li {
+    padding-left: rhythm(0.5);
+    margin-left: rhythm(2)
+  }
+}
+
+ol li {
+  list-style-type: decimal;
+}
+
+p + p {
+  margin-top: rhythm(1);
+}
+
+strong {
+  font-weight: $bold;
+}
+
+ul li {
+  list-style-type: disc;
+}
+
+
+/*
+  II. Header
+*/
+
+header#header {
+  margin-bottom: rhythm(3);
+  margin-top: rhythm(3);
+
+  section {
+    @include row;
+  }
+
+  nav {
+    @include row;
+    @include trailing-border(1px, 1);
+
+    border-color: $light-grey;
+    color: $grey;
+    margin-top: rhythm(1);
+
+    a {
+      color: $dark-grey;
+      border: none;
+
+      &:hover {
+        color: darken($dark-grey, 5%);
+      }
+    }
+
+    ul {
+      li {
+        display: inline-block;
+        margin-left: 0;
+        padding-left: 0;
+
+        & + li {
+          padding-left: rhythm(0.5);
+        }
+      }
+    }
+  }
+}
+
+
+/*
+  III. Main
+*/
+
+main {
+  .archive {
+    header {
+      @include row;
+
+      h3 {
+        @include adjust-font-size-to(16px);
+
+        font-weight: 600;
+        margin-bottom: rhythm(1);
+      }
+    }
+
+    &.border:before {
+      @include row;
+
+      content: "———";
+      color: $light-grey;
+      display: block;
+      font-weight: 500;
+      padding: rhythm(2) 0;
+      letter-spacing: -2px;
+    }
+
+    &.no-border {
+      h3 {
+        @include adjust-font-size-to(18px);
+      }
+    }
+  }
+}
+
+// #map-container {
+//   @include row;
+//
+//   margin-bottom: rhythm(1);
+//   margin-top: rhythm(0.5);
+//
+//   #map {
+//     height: rhythm(20);
+//     width: 100%;
+//   }
+// }
+
+#map { position:absolute; top:0; bottom:0; width:100%; }
+
+/*
+  IV. Footer
+*/
+
+footer#footer {
+  @include row;
+  @include leading-border(1px, 1);
+
+  border-color: $light-grey;
+  color: $grey;
+  margin-bottom: rhythm(2);
+  margin-top: rhythm(4);
+
+  a {
+    color: $dark-grey;
+
+    &:hover {
+      color: darken($dark-grey, 5%);
+    }
+  }
 }

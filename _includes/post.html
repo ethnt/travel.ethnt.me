@@ -1,24 +1,24 @@
-{% capture content %}
-<article class="page">
+<article class="post">
   <header>
-    <h2>{{ current.title }}</h2>
+    <h2><a href="{{ current.url }}">{{ current.title }}</a></h2>
     <section class="assets">
       {% for asset in current.assets %}
-        {% unless asset.meta.inline %}
-          <figure>
-            <a href="{{ asset.url }}">
-              {% if asset.type == 'image' %}
-                <img src="{{ asset.url }}">
-              {% elsif asset.type == 'audio' %}
-                <audio><source src="{{ asset.url }}" type="{{ asset.content_type }}"></audio>
-              {% elsif asset.type == 'video' %}
-                <video><source src="{{ asset.url }}" type="{{ asset.content_type }}"></video>
-              {% elsif asset.type == 'other' %}
-                <a href="{{ asset.url }}">Download {{ asset.filename }}</a>
-              {% endif %}
-            </a>
-          </figure>
-        {% endunless %}
+        <figure>
+          <a name="{{ asset.filename }}" href="{{ asset.url }}">
+            {% if asset.type == 'image' %}
+            <img src="{{ asset.url }}">
+            {% elsif asset.type == 'audio' %}
+              <audio><source src="{{ asset.url }}" type="{{ asset.content_type }}"></audio>
+            {% elsif asset.type == 'video' %}
+              <video><source src="{{ asset.url }}" type="{{ asset.content_type }}"></video>
+            {% elsif asset.type == 'other' %}
+              <a href="{{ asset.url }}">Download {{ asset.filename }}</a>
+            {% endif %}
+          </a>
+          {% if asset.meta.caption %}
+            <figcaption>{{ asset.meta.caption }}</figcaption>
+          {% endif %}
+        </figure>
       {% endfor %}
       {% if current.meta['video'] %}
         <figure>
@@ -30,7 +30,7 @@
   <div class="content">
     {{ current.body }}
   </div>
-  <!-- <footer>
+  <footer>
     <p class="meta"><time datetime="{{ current.date | date: '%F %T' }}">{{ current.date | date: '%B %d, %Y' }}</time></p>
     <nav>
       <article class="next">
@@ -46,9 +46,5 @@
         {% endif %}
       </article>
     </nav>
-  </footer> -->
+  </footer>
 </article>
-
-{% endcapture %}
-
-{% include 'layouts/default' %}

@@ -15,15 +15,28 @@
 		<link type="application/rss+xml" rel="alternate" title="{{ site.title }}" href="{{ site.feed_url }}">
 
     <link href="/assets/application.css" rel="stylesheet">
-
-    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css' rel='stylesheet' />
-
-    {% include 'includes/typekit' %}
   </head>
   <body>
-    
+    <header id="header" role="banner">
+      <section>
+        <h1><a href="/">{{ site.title }}</a></h1>
+        </ul>
+      </section>
+      <nav>
+        <ul>
+          {% for page in site.pages %}
+            <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </header>
+    <main role="main">
+      {{ content }}
+    </main>
+    <footer id="footer">
+      <p><a href="http://ethnt.me">Ethan Turkeltaub</a> fecit {{ site.date | date: "%Y" }}.</p>
+    </footer>
 
-    <script src="/assets/application.js"></script>
+    {% include 'includes/analytics' %}
   </body>
 </html>

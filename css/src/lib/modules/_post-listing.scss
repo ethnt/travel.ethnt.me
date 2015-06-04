@@ -1,0 +1,21 @@
+/*
+  Forma
+    file: css/lib/modules/_post-listing.scss
+*/
+
+article.post-listing {
+  @include row;
+
+  & + article.post {
+    margin-top: rhythm(1);
+  }
+
+  a {
+    color: $dark-grey;
+  }
+
+  span {
+    color: $grey;
+    float: right;
+  }
+}

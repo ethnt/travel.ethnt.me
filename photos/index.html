@@ -1,0 +1,30 @@
+{% capture content %}
+<!-- <div class="page photos">
+  <header>
+    <h2>Photos</h2>
+  </header>
+  <section class="gallery">
+    {% for post in site.posts %}
+      {% for asset in post.assets %}
+        <a href="{{ post.url }}#{{ asset.filename }}"><img src="{{ asset.url }}"></a>
+      {% endfor %}
+    {% endfor %}
+  </section>
+</div> -->
+
+<div class="photos">
+  {% for post in site.pages.photos.posts %}
+    <figure class="photo">
+      {% for asset in post.assets %}
+        <a href="{{ asset.url }}"><img src="{{ asset.url }}"></a>
+      {% endfor %}
+      <figcaption>
+        <p>{{ post.body }}</p>
+        <p class="meta"><time datetime="{{ post.date | date: '%F %T' }}">{{ post.date | date: '%B %d, %Y' }}</time></p>
+      </figcaption>
+    </figure>
+  {% endfor %}
+</div>
+{% endcapture %}
+
+{% include 'layouts/default' %}
