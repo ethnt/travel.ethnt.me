@@ -1,0 +1,167 @@
+// Travel
+
+@import lib/base
+
+
+// Universal
+
+html
+  +leading-border(5px, 0)
+
+  border-color: $light-grey
+
+body
+  +font-smoothing(antialiased)
+
+  background: $base
+  color: $text
+  font-family: $serif
+  font-weight: 400
+
+a
+  +background(linear-gradient(bottom, $base 50%, $grey 50%))
+
+  background-repeat: repeat-x
+  background-size: 100% 2px
+  background-position: 0 26px
+  color: darken($text, 10%)
+  text-decoration: none
+
+  &:hover
+    color: $sea-foam
+
+h1, h2, h3, h4, h5, h6
+  font-weight: 600
+
+img
+  max-width: 100%
+
+
+// Main
+
+main
+  +container
+
+  margin-top: rhythm(2)
+
+
+// Sidebar
+
+main > aside
+  +span(3 of 12)
+
+  a
+    background: none
+
+  h1
+    display: block
+
+    &:after
+      color: $grey
+      content: '\2014'
+      display: block
+
+    a
+      color: $text
+
+  nav li
+    a
+      color: $dark-grey
+
+    &.selected a
+      color: darken($dark-grey, 35%)
+
+
+// Content
+
+main > section
+  +span(last 9 of 12)
+
+article.post
+  header
+    text-align: center
+
+    &:after
+      color: $grey
+      content: '\2014'
+      display: block
+
+    h2
+      margin-top: rhythm(0.5)
+      font-size: 24px
+      line-height: 24px
+
+    span
+      +adjust-font-size-to(16px)
+
+      color: $grey
+
+  p + p
+    text-indent: rhythm(1)
+
+  footer
+    nav
+      +leading-border(1px, 1)
+
+      border-color: $light-grey
+      margin-top: rhythm(1)
+
+    .pagination
+      +container
+
+      .newer
+        +span(6 of 12)
+
+      .older
+        +span(last 6 of 12)
+
+        text-align: right
+
+article.photo
+  figure a
+    background: none
+
+  span
+    color: $grey
+
+  & + article.photo
+    &:before
+      color: $grey
+      content: '\2014'
+      display: block
+      margin-bottom: rhythm(1)
+      margin-top: rhythm(1)
+      text-align: center
+
+
+
+article.listing
+  +clearfix
+
+  h4, span
+    display: inline-block
+
+  h4
+    font-weight: 400
+
+    a
+      background: none
+      color: $dark-grey
+
+  span
+    color: $grey
+    float: right
+
+// Footer
+
+footer#footer
+  +container
+  +leading-border(1px, 1)
+
+  border-color: $light-grey
+  color: $grey
+  margin-bottom: rhythm(2)
+  margin-top: rhythm(3)
+
+  a
+    color: $dark-grey

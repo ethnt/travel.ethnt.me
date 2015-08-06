@@ -1,0 +1,25 @@
+@import "compass/typography/vertical_rhythm"
+
+$base-font-size: 20px
+$base-line-height: 40px
+
++establish-baseline
+
+$serif: "warnock-pro", Times New Roman, Times, serif
+$sans-serif: "adelle-sans", Helvetica, Arial, sans-serif
+
+// Prevent flash of webfonts
+.wf-loading
+  visibility: hidden
+
+=font-size($size)
+  font-size: $size
+  font-size: calculateRem($size)
+
+=font-smoothing($value: antialiased)
+  @if $value == antialiased
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+  @else
+    -webkit-font-smoothing: subpixel-antialiased
+    -moz-osx-font-smoothing: auto

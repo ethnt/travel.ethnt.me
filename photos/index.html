@@ -1,0 +1,7 @@
+{% capture content %}
+  {% for post in site.pages.photos.posts %}
+    {% include 'includes/photo' %}
+  {% endfor %}
+{% endcapture %}
+
+{% include 'layouts/default' %}

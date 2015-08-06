@@ -1,0 +1,11 @@
+<article class="photo">
+  {% for asset in post.assets %}
+    <figure>
+      <a href="{{ asset.url }}"><img src="{{ asset.url }}"></a>
+    </figure>
+  {% endfor %}
+  {{ post.body }}
+  <footer>
+    <span>{{ post.date | date: '%B %d, %Y' }}{% if post.meta.place %} in {{ post.meta.place }}{% endif %}</span>
+  </footer>
+</article>

@@ -1,0 +1,7 @@
+{% capture content %}
+  {% for post in site.pages.words.posts limit:1 %}
+    {% include 'includes/post' %}
+  {% endfor %}
+{% endcapture %}
+
+{% include 'layouts/default' %}
