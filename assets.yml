@@ -1,5 +1,7 @@
 javascripts:
   application:
+    - jsc/lib/jquery.js
+    - jsc/lib/jquery.unveil.js
     - jsc/application.js
 
 stylesheets:

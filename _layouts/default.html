@@ -30,7 +30,7 @@
         <nav>
           <ul>
             {% for page in site.pages %}
-              <li class="{% if current.slug == page.slug %}selected{% endif %}"><a href="{{ page.slug }}">{{ page.title }}</a></li>
+              <li class="{% if current.slug == page.slug %}selected{% endif %}"><a href="/{{ page.slug }}">{{ page.title }}</a></li>
             {% endfor %}
           </ul>
         </nav>
@@ -40,7 +40,7 @@
       </section>
     </main>
     <footer id="footer" role="footer">
-      <p><a href="#">Ethan Turkeltaub</a> fecit 2015.</p>
+      <p>&copy; {{ site.time | date: '%Y' }} <a href="http://ethnt.me">Ethan Turkeltaub</a></p>
     </footer>
 
     <script src="/assets/application.js"></script>
