@@ -1,5 +1,12 @@
 {% capture content %}
-  Foo!
+  <article class="page">
+    <header>
+      {% unless meta.hide_title == "true" %}
+        <h2>{{ title }}</h2>
+      {% endunless %}
+    </header>
+    {{ body }}
+  </article>
 {% endcapture %}
 
 {% include 'layouts/default' %}

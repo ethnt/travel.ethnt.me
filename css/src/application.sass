@@ -44,42 +44,87 @@ img
 // Main
 
 main
-  +container
+  margin-left: rhythm(1)
+  margin-right: rhythm(1)
+  margin-top: rhythm(1)
 
-  margin-top: rhythm(2)
+  +susy-breakpoint($screen-small, $susy)
+    +container
+
+    margin-top: rhythm(2)
+
+
+  & > aside
+    +container
+
+    +susy-breakpoint($screen-small, $susy)
+      +span(3 first)
+
+      margin-bottom: 0
+
+      h1
+        width: 100% !important
+        float: left !important
+
+        &:after
+          color: $grey
+          content: '\2014'
+          display: block
+
+      nav
+        width: 100% !important
+        float: left !important
+
+        ul
+          float: none !important
+
+        li
+          display: block !important
+          margin-left: 0 !important
+
+  & > section
+    +container
+
+    +susy-breakpoint($screen-small, $susy)
+      +span(9 last)
 
 
 // Sidebar
 
 main > aside
-  +span(3 of 12)
+  margin-bottom: rhythm(1)
 
   a
     background: none
 
   h1
-    display: block
-
-    &:after
-      color: $grey
-      content: '\2014'
-      display: block
+    +span(3 first)
 
     a
       color: $text
 
-  nav li
-    a
-      color: $dark-grey
+  nav
+    +span(9 last)
 
-    &.selected a
-      color: darken($dark-grey, 35%)
+    ul
+      float: right
+
+    li
+      display: inline-block
+
+      & + li
+        margin-left: rhythm(1)
+
+      a
+        color: $dark-grey
+
+      &.selected a
+        color: darken($dark-grey, 35%)
 
 
 // Content
 
-main > section
-  +span(last 9 of 12)
+// main > section
 
 article.post
   header
@@ -137,8 +182,6 @@ article.photo
       margin-top: rhythm(1)
       text-align: center
 
-
-
 article.listing
   +clearfix
 
@@ -156,6 +199,19 @@ article.listing
     color: $grey
     float: right
 
+article.page
+  +clearfix
+
+  header
+    h2
+      color: darken($dark-grey, 35%)
+
+    &:after
+      color: $grey
+      content: '\2014'
+      display: block
+
+
 // Footer
 
 footer#footer
@@ -166,6 +222,14 @@ footer#footer
   color: $grey
   margin-bottom: rhythm(2)
   margin-top: rhythm(3)
+  margin-left: rhythm(1)
+  margin-right: rhythm(1)
+
+  +susy-breakpoint($screen-small, $susy)
+    +container
+    
+    margin-left: 0
+    margin-right: 0
 
   a
     color: $dark-grey
