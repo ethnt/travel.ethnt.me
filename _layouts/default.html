@@ -16,12 +16,7 @@
 
     <link href="/assets/application.css" rel="stylesheet">
 
-    <script src="//use.typekit.net/mtr3pkw.js"></script>
-    <script>
-      try {
-        Typekit.load();
-      } catch(e) { }
-    </script>
+    {% include "includes/typekit" %}
   </head>
   <body>
     <main>
@@ -42,6 +37,8 @@
     <footer id="footer" role="footer">
       <p>&copy; {{ site.time | date: '%Y' }} <a href="http://ethnt.me">Ethan Turkeltaub</a></p>
     </footer>
+
+    {% include "includes/analytics" %}
 
     <script src="/assets/application.js"></script>
   </body>
