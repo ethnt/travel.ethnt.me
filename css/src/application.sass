@@ -180,6 +180,35 @@ article.photo
       &:hover
         color: $dark-grey
 
+  footer
+    h3
+      color: darken($dark-grey, 35%)
+
+    nav
+      +leading-border(1px, 1)
+
+      border-color: $light-grey
+      margin-top: rhythm(1)
+
+    .pagination
+      +container
+
+      a
+        background: none
+        color: $grey
+
+        &:hover
+          color: $dark-grey
+
+      .newer
+        +span(6 of 12)
+
+      .older
+        +span(last 6 of 12)
+
+        text-align: right
+
+
   & + article.photo
     &:before
       color: $grey
@@ -200,7 +229,10 @@ article.listing
 
     a
       background: none
-      color: $dark-grey
+      color: $grey
+
+      &:hover
+        color: $dark-grey
 
   span
     color: $grey
@@ -235,4 +267,8 @@ footer#footer
     margin-right: rhythm(1)
 
   a
-    color: $dark-grey
+    background: none
+    color: $grey
+
+    &:hover
+      color: $dark-grey

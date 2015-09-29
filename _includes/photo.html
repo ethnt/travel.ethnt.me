@@ -12,5 +12,28 @@
   {{ post.body }}
   <footer>
     <span><a href="{{ post.url }}">{{ post.date | date: '%B %d, %Y' }}</a>{% if post.meta.place %} &ndash; {{ post.meta.place }}{% endif %}</span>
+    <nav class="pagination">
+      <article class="newer">
+        {% if post.next %}
+          <h3>Newer</h3>
+          <p><a href="{{ post.next.url }}">{{ post.next.title }}</a></p>
+        {% endif %}
+      </article>
+      <article class="older">
+        {% if post.previous %}
+          <h3>Older</h3>
+          <p><a href="{{ post.previous.url }}">{{ post.previous.title }}</a></p>
+        {% endif %}
+      </article>
+    </nav>
+    <nav class="archive">
+      <h3>Archives</h3>
+      {% for archive in site.posts %}
+        <article class="listing">
+          <h4><a href="{{ archive.permalink }}">{{ archive.title }}</a></h4>
+          <span>{{ archive.date | date: '%B %d, %Y' }}</span>
+        </article>
+      {% endfor %}
+    </nav>
   </footer>
 </article>

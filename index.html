@@ -1,5 +1,5 @@
 {% capture content %}
-  {% for post in site.pages.photos.posts %}
+  {% for post in site.pages.photos.posts limit:1 %}
     {% include 'includes/photo' %}
   {% endfor %}
 {% endcapture %}
